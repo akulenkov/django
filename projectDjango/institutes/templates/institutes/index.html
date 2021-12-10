@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    {% load bootstrap5 %}
+    {% bootstrap_javascript %}
+    {% bootstrap_css %}
+    <title>Главная - Научно-исследовательский институт</title>
+</head>
+
+<!--name = models.CharField(max_length=20, verbose_name='Название')-->
+<!--    start_date = models.DateTimeField(auto_now_add = True, verbose_name='Дата начала')-->
+<!--    end_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата окончания')-->
+<!--    volume = models.FloatField(verbose_name='Объем финансирования')-->
+
+
+<body>
+    <h1>Проекты</h1>
+    {% for bb in bbs %}
+    <div>
+        <h2>{{ bb.name }}</h2>
+        <p>{{ bb.start_date }}</p>
+        <p>{{ bb.end_date }}</p>
+        <p>{{ bb.volume }}</p>
+    </div>
+    {% endfor %}
+</body>
+
+<!--<body>-->
+<!--    <h1>Сотрудники</h1>-->
+<!--    {% for bb in bbs %}-->
+<!--    <div>-->
+<!--        <h2>{{ bb.last_name }}</h2>-->
+<!--        <p>{{ bb.first_name }}</p>-->
+<!--        <p>{{ bb.mid_name }}</p>-->
+<!--        <p>{{ bb.position }}</p>-->
+<!--    </div>-->
+<!--    {% endfor %}-->
+<!--</body>-->
+
+
+
+<!--</html>-->
